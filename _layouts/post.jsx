@@ -12,16 +12,15 @@ function Layout({ title, content }) {
       <article>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        <div><Link href="/"><a>Home</a></Link></div>
       </article>
     </DefaultLayout>
   )
 }
 Layout.propTypes = {
-  children: propTypes.arrayOf(propTypes.element),
+  children: propTypes.arrayOf(propTypes.element)
 }
 Layout.defaultProps = {
-  children: null,
+  children: null
 }
 
 export default Layout

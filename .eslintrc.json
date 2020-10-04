@@ -25,6 +25,8 @@
         "react/jsx-props-no-spreading": "off",
         "no-restricted-syntax": "off",
         "no-await-in-loop": "off",
-        "comma-dangle": [1, "always"]
+        "comma-dangle": [2, "never"],
+        "react/jsx-closing-tag-location": "off",
+        "import/extensions": "off"
     }
 }
