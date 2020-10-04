@@ -11,7 +11,8 @@ function Layout({ title, content }) {
       </Head>
       <article>
         <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} />
+        {/* TODO: content is a string of html, find a more elegant way of injecting it */}
+        <div dangerouslySetInnerHTML={{ __html: content, }} />
         <div><Link href="/"><a>Home</a></Link></div>
       </article>
     </DefaultLayout>
