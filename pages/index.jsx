@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import propTypes from 'prop-types'
 import Layout from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
 
@@ -7,8 +8,8 @@ export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
     props: {
-      allPostsData
-    }
+      allPostsData,
+    },
   }
 }
 
@@ -18,7 +19,6 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>…</Head>
-      <section className={utilStyles?.headingMd}>…</section>
       <section className={`${utilStyles?.headingMd} ${utilStyles?.padding1px}`}>
         <h2 className={utilStyles?.headingLg}>Blog</h2>
         <ul className={utilStyles?.list}>
@@ -35,4 +35,10 @@ export default function Home({ allPostsData }) {
       </section>
     </Layout>
   )
+}
+Home.propTypes = {
+  allPostsData: propTypes.arrayOf(propTypes.object),
+}
+Home.defaultProps = {
+  allPostsData: null,
 }
