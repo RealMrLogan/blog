@@ -1,19 +1,23 @@
-import Link from 'next/link'
-import Head from 'next/head'
-import Layout from '../../components/layout'
+import PostLayout from '../../_layouts/post'
+import { getPostBySlug, getAllPosts } from '../../api'
 
-export default function FirstPost() {
-  return (
-    <Layout>
-      <Head>
-        <title>First Post</title>
-      </Head>
-      <h1>First Post</h1>
-      <h2>
-        <Link href="/">
-          Back to home
-        </Link>
-      </h2>
-    </Layout>
-  )
+export default function Post(props) {
+  return <PostLayout title={props.title} content={props.content}/>
+}
+
+export async function getStaticProps(context) {
+  return {
+    props: await getPostBySlug(context.params.slug)
+  }
+}
+
+export async function getStaticPaths() {
+  let paths = await getAllPosts()
+  paths = paths.map(post => ({
+    params: { slug:post.slug }
+  }))
+  return {
+    paths: paths,
+    fallback: false
+  }
 }

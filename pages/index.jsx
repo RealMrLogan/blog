@@ -1,44 +1,32 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import propTypes from 'prop-types'
-import Layout from '../components/layout'
-import { getSortedPostsData } from '../lib/posts'
+import { getConfig, getAllPosts } from '../api'
+import DefaultLayout from '../_layouts/default'
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData,
-    },
-  }
-}
-
-const utilStyles = {}
-
-export default function Home({ allPostsData }) {
+export default function Blog(props) {
   return (
-    <Layout home>
-      <Head>…</Head>
-      <section className={`${utilStyles?.headingMd} ${utilStyles?.padding1px}`}>
-        <h2 className={utilStyles?.headingLg}>Blog</h2>
-        <ul className={utilStyles?.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles?.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
-      </section>
-    </Layout>
+    <DefaultLayout title={props.title} description={props.description}>
+      <p>List of posts:</p>
+      <ul>
+        {props.posts.map((post, index) => (
+          <li key={index}>
+            <Link href={`/posts/${post.slug}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </DefaultLayout>
   )
 }
-Home.propTypes = {
-  allPostsData: propTypes.arrayOf(propTypes.object),
-}
-Home.defaultProps = {
-  allPostsData: null,
+
+export async function getStaticProps() {
+  const config = await getConfig()
+  const allPosts = await getAllPosts()
+  return {
+    props: {
+      posts: allPosts,
+      title: config.title,
+      description: config.description,
+    },
+  }
 }
