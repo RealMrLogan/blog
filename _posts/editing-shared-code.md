@@ -5,7 +5,7 @@ date: "Oct 3rd, 2020"
 
 "Not-Me": You pushed code on Friday!
 
-"Me": Yeah, what's the big deal? My code shouldn't break anything.
+"Me": Yeah, my code shouldn't break anything.
 
 Ha! Let me tell you a story... A long, long time ago (I think it was two weeks ago) I was given the task at work to update a piece of global code. Global, meaning the whole site uses it, not just one or two pages. Global, as in, if I mess up, someone will probably notice.
 
@@ -29,14 +29,18 @@ I was winding down for the day and getting ready to go to bed, or at least getti
 
 The next day, I followed up to make sure my changes worked (trying to be a little pro-active at this point). And as expected, things were fine. I could finally rest that night knowing that there had been a lot of eyes on my changes and no one was complaining. Jump to the next Tuesday and I had noticed that there were even more errors that went under my radar. This time, I caught them and wasn't notified (which was a nice change of pace).
 
-I threw them on my TODO list and after a little planning, I started to go to work. At first I was stumped on how to fix them, but after taking a break and coming back to it, it was clear what I needed to do. One line of code changed and my PR is ready to merge.
+I threw them on my TODO list and after a little planning, I started to go to work. At first I was stumped on how to fix them, but after taking a break and coming back to it, it was clear what I needed to do. One line of code changed and my PR is ready to merge. Turns out that wasn't the only error that needed my attention. One of the teams that used this piece of code only partially updated to the new version. So that was fun trying to fix.
 
 {TODO: Finish that part of the story}
 
-Now that that was done, I needed to make the same functionality change to a different part of the site (Oh, did I not mention that we have two stacks on the site?) Fortunately I was a lot more comfortable in this stack than the previous one. So my changes had kind of been put on the back burner until I got the above problem figured out. Now it's time to rinse and repeat.
+Now that that was done, I needed to make the same functionality change to a different part of the site (Oh, did I not mention that we have two stacks?) Fortunately I was a lot more comfortable in this stack than the previous one. So my changes had kind of been put on the back burner until I got the above problem figured out. Now it's time to rinse and repeat.
 
 Learning from my many mistakes from the last week, I carefully tested and monitored my changes. And better yet, I didn't push on a Friday! This time I was confident my changes would work as expected, but just to be safe, I blocked out my entire day to handle any fallout from my merge.
 
 {TODO: finish second part}
 
 ## Lessons Learned
+
+1. Don't push on a Friday
+2. It never hurts to do better tests
+3. Teams can help a lot when you feel overwhelmed
