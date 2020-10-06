@@ -1,5 +1,5 @@
 ---
-title: "Never push code on Friday"
+title: "Editing Shared Code"
 date: "Oct 3rd, 2020"
 ---
 
