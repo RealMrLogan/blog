@@ -1,6 +1,8 @@
 ---
 title: "Editing Shared Code"
 date: "Oct 3rd, 2020"
+headerImage: "/img/old-london-buttons.jpg"
+headerImageAlt: "Old London Buttons"
 ---
 
 "Not-Me": You pushed code on Friday!
@@ -31,11 +33,11 @@ The next day, I followed up to make sure my changes worked (trying to be a littl
 
 I threw them on my TODO list and after a little planning, I started to go to work. At first I was stumped on how to fix them, but after taking a break and coming back to it, it was clear what I needed to do. One line of code changed and my PR is ready to merge. Turns out that wasn't the only error that needed my attention. One of the teams that used this piece of code only partially updated to the new version. So that was fun trying to fix.
 
-{TODO: Finish that part of the story}
+Now that my code is is pretty much in a working state, I had to notify all the teams to turn something off that was overriding my changes. I sent out message and maybe one or two people did it... Then a few days later I had my lead send out a similar message, and sure enough, within five minutes, five teams had made the changes. Note to self: gain more authority.
 
 Now that that was done, I needed to make the same functionality change to a different part of the site (Oh, did I not mention that we have two stacks?) Fortunately I was a lot more comfortable in this stack than the previous one. So my changes had kind of been put on the back burner until I got the above problem figured out. Now it's time to rinse and repeat.
 
-Learning from my many mistakes from the last week, I carefully tested and monitored my changes. And better yet, I didn't push on a Friday! This time I was confident my changes would work as expected, but just to be safe, I blocked out my entire day to handle any fallout from my merge.
+Experiencing many mistakes from the last week, I carefully tested and monitored my changes. And better yet, I didn't push on a Friday! This time I was confident my changes would work as expected, but just to be safe, I blocked out my entire day to handle any fallout from my merge.
 
 {TODO: finish second part}
 
@@ -44,3 +46,7 @@ Learning from my many mistakes from the last week, I carefully tested and monito
 1. Don't push on a Friday
 2. It never hurts to do better tests
 3. Teams can help a lot when you feel overwhelmed
+
+## Better next time
+
+If I had to do this again (please no), I would for sure test more. Maybe even dabble a little TDD. And above all else, don't push on Friday.
