@@ -21,7 +21,11 @@ const containerCss = css`
   }
 
   ol, ul {
-    line-height: 1.25em;
+    line-height: 1.5em;
+  }
+
+  li {
+    margin-bottom: 5px;
   }
 
   blockquote {
