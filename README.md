@@ -19,3 +19,6 @@ Images must be stored in the `public` folder and then referenced starting with `
 
 # Acknowledgements
 This [tutorial on Next.js](https://css-tricks.com/building-a-blog-with-next-js/) helped me get started.
+
+# Potential Features:
+- **Playbook**. A companion to Storybook, take storybook stories and use them in a sandbox. Or at least the components from those stories.
