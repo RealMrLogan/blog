@@ -10,10 +10,6 @@ const containerCss = css`
   padding: 0 50px;
   max-width: 635px;
 
-  ol, ul {
-    line-height: 1.5em;
-  }
-
   li {
     margin-bottom: 5px;
   }
@@ -66,7 +62,7 @@ const Layout = ({
         <img src={headerImage} alt={headerImageAlt} />
       </picture>
       <h1>{title}</h1>
-      <caption>{date}</caption>
+      <span>{date}</span>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </article>
   </DefaultLayout>

@@ -46,7 +46,7 @@ export default function PostTeaser({ post }) {
         <div css={secondContainerCss}>
           <h3 css={categoryCss}>{post.category}</h3>
           <h2 css={titleCss}>{post.title}</h2>
-          <caption>{post.introText}</caption>
+          <span>{post.introText}</span>
         </div>
       </div>
     </Link>

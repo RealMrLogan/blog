@@ -16,6 +16,11 @@ export async function getAllPosts() {
       ...meta.data
     })
   }
+  posts.sort(({ date: a }, { date: b }) => {
+    if (a < b) return 1
+    if (a > b) return -1
+    return 0
+  })
   return posts
 }
 

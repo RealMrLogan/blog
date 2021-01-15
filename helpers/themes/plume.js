@@ -23,14 +23,19 @@ const plume = {
     h3 {
       font-size: 1em;
     }
-    p, caption {
+    p, caption, ol, ul, span {
       font-family: 'Raleway', sans-serif;
       font-size: 14pt;
-      line-height: 2em;
       letter-spacing: 0.5pt;
+    }
+    p {
+      line-height: 2em;
     }
     caption {
       display: block;
+    }
+    ol, ul {
+      line-height: 1.5em;
     }
 
     @media only screen and (max-width: 450px) {

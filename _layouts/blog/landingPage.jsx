@@ -45,7 +45,7 @@ const spanCss = css`
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.15em;
+  font-size: 0.75em !important;
   color: ${theme.grey};
   letter-spacing: 0;
 `
