@@ -11,7 +11,7 @@ import PostTeaser from './postTeaser'
 const mainCss = css`
   padding: 0 30px;
   background-color: ${theme.lightGrey};
-  margin-bottom: -40vh;
+  margin-bottom: -400px;
 
   * {
     z-index: 1;
@@ -20,18 +20,22 @@ const mainCss = css`
   ul {
     padding: 0;
   }
+  
+  @media only screen and (max-width: 450px) {
+    margin-bottom: 0;
+  }
 `
 const backgroundBlockCss = css`
   background-color: ${theme.black};
   width: calc(100% + 60px);
-  height: 45vh;
+  height: 400px;
   position: relative;
   z-index: 0;
   left: -30px;
 `
 const contentCss = css`
   position: relative;
-  top: -45vh;
+  top: -400px;
 `
 const headingCss = css`
   padding: 40px 0 20px;
@@ -52,7 +56,7 @@ const spanCss = css`
 const gridCss = css`
   display: grid;
   grid-template-columns: repeat(3, 30%);
-  grid-gap: 5%;
+  grid-gap: 30px;
   
   @media only screen and (max-width: 450px) {
     grid-template-columns: 100%;
