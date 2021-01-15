@@ -9,7 +9,7 @@ const footerCss = css`
 
 const Footer = () => (
   <footer css={footerCss}>
-    <div>A personal blog</div>
+    <div>A personal site</div>
   </footer>
 )
 

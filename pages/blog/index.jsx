@@ -1,21 +1,9 @@
-import Link from 'next/link'
 import { getConfig, getAllPosts } from '../../api'
-import DefaultLayout from '../../_layouts/default'
+import Layout from '../../_layouts/blog/landingPage'
 
 export default function Blog({ description, posts }) {
   return (
-    <DefaultLayout title="Blog" description={description}>
-      <p>List of posts:</p>
-      <ul>
-        {posts.map((post, index) => (
-          <li key={index}>
-            <Link href={`blog/posts/${post.slug}`}>
-              {post.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </DefaultLayout>
+    <Layout title="Blog" description={description} {...{ posts }} />
   )
 }
 

@@ -2,23 +2,13 @@
 import propTypes from 'prop-types'
 import Head from 'next/head'
 import { jsx, css } from '@emotion/core'
-import DefaultLayout from './default'
+import DefaultLayout from '../default'
+import { plume as theme } from '../../helpers/themes'
 
 const containerCss = css`
   margin: auto;
   padding: 0 50px;
   max-width: 635px;
-
-  h1, h2, h3 {
-    font-family: 'Oswald';
-  }
-
-  p, ol, ul {
-    font-family: 'Raleway';
-    line-height: 2em;
-    font-size: 14pt;
-    letter-spacing: 0.5pt;
-  }
 
   ol, ul {
     line-height: 1.5em;
@@ -36,6 +26,11 @@ const containerCss = css`
 
   img {
     width: 100%;
+  }
+
+  caption {
+    display: block;
+    text-align: left;
   }
 `
 const mobileCss = css`
@@ -60,17 +55,18 @@ const mobileCss = css`
 `
 
 const Layout = ({
-  title, content, headerImage, headerImageAlt
+  title, content, headerImage, headerImageAlt, date
 }) => (
   <DefaultLayout title={title}>
     <Head>
       <title>{title}</title>
     </Head>
-    <article css={[containerCss, mobileCss]}>
+    <article css={[containerCss, mobileCss, theme.setup]}>
       <picture>
         <img src={headerImage} alt={headerImageAlt} />
       </picture>
       <h1>{title}</h1>
+      <caption>{date}</caption>
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </article>
   </DefaultLayout>

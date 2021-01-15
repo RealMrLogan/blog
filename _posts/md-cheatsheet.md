@@ -1,5 +1,6 @@
 ---
 title: "Markdown CheatSheet"
+category: 'reference'
 ---
 # H1
 ## H2
