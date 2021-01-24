@@ -20,8 +20,18 @@ const containerCss = css`
     padding-left: 30px;
   }
 
-  img {
-    width: 100%;
+  picture {
+    display: block;
+    max-height: 300px;
+    overflow: hidden;
+    width: 150%;
+    margin-left: -25%;
+
+    img {
+      width: 100%;
+      margin-top: 35%;
+      transform: translateY(-65%);
+    }
   }
 
   caption {
@@ -38,7 +48,6 @@ const mobileCss = css`
     }
 
     picture {
-      display: block;
       left: 50%;
       margin-left: -50vw;
       margin-right: -50vw;
@@ -46,6 +55,12 @@ const mobileCss = css`
       position: relative;
       right: 50%;
       width: 100vw;
+      max-height: 200px;
+
+      img {
+        margin: 0;
+        transform: none;
+      }
     }
   }
 `
