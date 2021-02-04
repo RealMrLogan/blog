@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import Head from 'next/head'
 import propTypes from 'prop-types'
 import Header from '../../_includes/header'

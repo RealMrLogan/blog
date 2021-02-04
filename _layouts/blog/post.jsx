@@ -1,7 +1,7 @@
-/** @jsx jsx */
+/** @jsxImportSource @emotion/react */
 import propTypes from 'prop-types'
 import Head from 'next/head'
-import { jsx, css } from '@emotion/core'
+import { css } from '@emotion/react'
 import DefaultLayout from '../default'
 import { plume as theme } from '../../helpers/themes'
 

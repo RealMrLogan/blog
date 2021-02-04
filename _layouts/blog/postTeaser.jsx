@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import propTypes from 'prop-types'
 import Link from 'next/link'
 import { plume as theme } from '../../helpers/themes'

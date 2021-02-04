@@ -26,7 +26,7 @@ export async function getAllPosts() {
 
 export async function getConfig() {
   const config = await import('../config.yml')
-  return yaml.safeLoad(config.default)
+  return yaml.load(config.default)
 }
 
 export async function getPostBySlug(slug) {
