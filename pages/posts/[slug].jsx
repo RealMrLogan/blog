@@ -1,5 +1,5 @@
-import PostLayout from '../../../_layouts/blog/post'
-import { getPostBySlug, getAllPosts } from '../../../api'
+import PostLayout from '../../_layouts/blog/post'
+import { getPostBySlug, getAllPosts } from '../../api'
 
 export default function Post(props) {
   return <PostLayout {...props} />

@@ -40,7 +40,7 @@ const titleCss = css`
 
 export default function PostTeaser({ post }) {
   return (
-    <Link href={`blog/posts/${post.slug}`}>
+    <Link href={`posts/${post.slug}`}>
       <div css={containerCss}>
         <img css={imageCss} src={post.headerImage} alt={post.headerImageAlt} />
         <div css={secondContainerCss}>
@@ -52,12 +52,3 @@ export default function PostTeaser({ post }) {
     </Link>
   )
 }
-
-/**
- *
-            <li key={index}>
-              <Link href={`blog/posts/${post.slug}`}>
-                {post.title}
-              </Link>
-            </li>
- */

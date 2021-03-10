@@ -24,7 +24,6 @@ const Header = () => (
       <div />
       <div>
         <Link href="/">Home</Link>
-        <Link href="/blog">Blog</Link>
       </div>
     </div>
   </header>
