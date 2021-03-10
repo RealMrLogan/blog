@@ -5,6 +5,6 @@ module.exports = {
     config.module.rules.push({ test: /\.yml$/, use: 'raw-loader' })
     return config
   },
-  assetPrefix: '/blog/',
-  basePath: '/blog/'
+  assetPrefix: '/blog',
+  basePath: '/blog'
 }
