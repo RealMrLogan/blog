@@ -6,5 +6,6 @@ module.exports = {
     return config
   },
   assetPrefix: '/blog',
-  basePath: '/blog'
+  basePath: '/blog',
+  trailingSlash: true
 }
