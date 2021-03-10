@@ -4,7 +4,7 @@
  * Required keys are `Primary`, `Secondary`, `Tertiary`, `Accent`, `SecondaryAccent`.
  * Optional (but recommended) keys are `Black`, `White`, `Grey`
  */
-import { css } from '@emotion/core'
+import { css } from '@emotion/react'
 
 const plume = {
   // boilerplate

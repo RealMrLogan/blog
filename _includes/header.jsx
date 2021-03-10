@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import Link from 'next/link'
 
 const headerCss = css`
@@ -24,7 +24,6 @@ const Header = () => (
       <div />
       <div>
         <Link href="/">Home</Link>
-        <Link href="/blog">Blog</Link>
       </div>
     </div>
   </header>

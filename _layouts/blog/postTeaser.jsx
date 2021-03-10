@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import propTypes from 'prop-types'
 import Link from 'next/link'
 import { plume as theme } from '../../helpers/themes'
@@ -40,7 +40,7 @@ const titleCss = css`
 
 export default function PostTeaser({ post }) {
   return (
-    <Link href={`blog/posts/${post.slug}`}>
+    <Link href={`posts/${post.slug}`}>
       <div css={containerCss}>
         <img css={imageCss} src={post.headerImage} alt={post.headerImageAlt} />
         <div css={secondContainerCss}>
@@ -52,12 +52,3 @@ export default function PostTeaser({ post }) {
     </Link>
   )
 }
-
-/**
- *
-            <li key={index}>
-              <Link href={`blog/posts/${post.slug}`}>
-                {post.title}
-              </Link>
-            </li>
- */
